@@ -1,0 +1,10 @@
+.good {
+  width: 100px;
+  height: 100px;
+  background-color: darkred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+}

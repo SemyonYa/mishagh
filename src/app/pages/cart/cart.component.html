@@ -1,0 +1,9 @@
+<h2>Корзина</h2>
+
+<button (click)="clear()">Очистить корзину</button>
+
+<div class="list">
+  <div class="item" *ngFor="let item of items; let i = index;">
+    <b>{{ i + 1}}. </b> <span>ID {{item.id}}</span><span>{{item.q}}</span>
+  </div>
+</div>

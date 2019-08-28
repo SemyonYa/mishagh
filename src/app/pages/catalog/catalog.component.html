@@ -1,0 +1,22 @@
+<!--<div class="wrap">-->
+<div class="menu">
+  <h2>Каталог товаров</h2>
+  <div class="menu-item" *ngFor="let cat of categories" (click)="showCategory(cat.id)">{{cat.name}}</div>
+</div>
+<div class="categories" *ngIf="!isCatalog">
+  <div class="category" *ngFor="let cat of categories" (click)="showCategory(cat.id)">
+    <h3>{{cat.name}}</h3>
+  </div>
+</div>
+<div class="goods" *ngIf="isCatalog">
+  <div class="goods-category">
+    <h3>{{currentCategory.name}}</h3>
+  </div>
+  <div class="good" *ngFor="let good of currentCategoryGoods" (click)="toCart(good.id, good.id * good.id)">
+    <h4>{{good.name}} (категория {{good.category}})</h4>
+    <p>{{good.description}}</p>
+    <p><b>{{good.price | currency:'RUB':'symbol-narrow' }}</b></p>
+  </div>
+</div>
+<!--</div>-->
+
