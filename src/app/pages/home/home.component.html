@@ -1,2 +1,48 @@
-<p>home works!</p>
+<carousel [interval]="50000" [pauseOnFocus]="false" [noPause]="true">
+  <slide class="animated fadeIn">
+    <!--<img src="../../../assets/img/merc_01.jpg" alt="First slide" style="display: block; width: 100%;">-->
+    <div class="carousel-caption d-none d-md-block">
+      <h3>ВИБРОИЗОЛЯЦИЯ</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </slide>
+  <slide class="animated fadeIn">
+    <!--<img src="../../../assets/img/merc_02.jpg" alt="Second slide" style="display: block; width: 100%;">-->
+    <div class="carousel-caption d-none d-md-block">
+      <h3>ШУМОИЗОЛЯЦИЯ</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </slide>
+  <slide class="animated fadeIn">
+    <!--<img src="../../../assets/img/ford_01.jpg" alt="Third slide" style="display: block; width: 100%;">-->
+    <div class="carousel-caption d-none d-md-block">
+      <h3>АНТИСКРИП</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+</carousel>
 
+
+<div class="static-block">
+  <h1>ВИКАР АВТО</h1>
+  <h2>Профессиональная шумоизоляция</h2>
+</div>
+
+
+<div class="block">
+  <div class="inner">
+    <div class="hands">
+      <h4>Своими руками</h4>
+      <div class="icon"></div>
+      <p class="text">Информация как самостоятельно сделать свой автомобиль комфортнее</p>
+      <a routerLink="/install" class="button">Перейти в раздел</a>
+    </div>
+    <div class="calc">
+      <h4>Расчет материалов</h4>
+      <div class="icon"></div>
+      <p class="text">Информация о количестве и стоимости шумоизоляции для вашего автомобиля</p>
+      <a routerLink="/catalog" class="button">Перейти в раздел</a>
+    </div>
+  </div>
+</div>
+<footer>&copy; 2019 VIKAR AUTO</footer>

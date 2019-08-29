@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {CartService} from './services/cart.service';
+import {MenuItem} from './models/menu-item';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,22 @@ import {CartService} from './services/cart.service';
 export class AppComponent implements OnInit {
   title = 'VIKAR';
   counter: number;
+  menu: Set<MenuItem> = new Set();
+  isCollapsed = true;
 
   constructor(private cartService: CartService) {
   }
 
   ngOnInit() {
     this.cartService.items.subscribe(data => this.counter = data.length);
+    this.menu
+      .add(new MenuItem('Главная', '/'))
+      .add(new MenuItem('Каталог', '/catalog'))
+      .add(new MenuItem('Установка', '/install'))
+      .add(new MenuItem('Контакты', '/contact'));
   }
 
+  hideMobileMenu() {
+    this.isCollapsed = true;
+  }
 }

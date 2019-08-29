@@ -1,12 +1,23 @@
 <div class="wrap">
   <nav>
-    <span class="logo">LOGO</span>
+    <a routerLink="/">
+      <span class="logo"></span>
+    </a>
+
     <div class="links">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Главная</a>
-      <a routerLink="/catalog" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Каталог</a>
+      <a *ngFor="let item of menu" routerLink="{{item.link}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{item.title}}</a>
+      <button class="menu-mobile-btn" (click)="isCollapsed = !isCollapsed"
+              [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">&#9776;</button>
     </div>
     <a routerLink="/cart" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Корзина ({{counter}})</a>
   </nav>
+  <div class="menu-mobile">
+    <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
+      <div class="menu-mobile-items">
+        <a *ngFor="let item of menu" routerLink="{{item.link}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="hideMobileMenu()">{{item.title}}</a>
+      </div>
+    </div>
+  </div>
   <router-outlet></router-outlet>
 </div>
 

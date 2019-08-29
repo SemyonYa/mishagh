@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import {Good} from "../models/good";
-import {Category} from "../models/category";
+import {Good} from '../models/good';
+import {Category} from '../models/category';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-
+  private host = 'http://vikar.injini.ru/';
   constructor() { }
 
   getGoods(): Good[] {

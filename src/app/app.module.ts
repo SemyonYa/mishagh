@@ -8,10 +8,17 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { CartComponent } from './pages/cart/cart.component';
 import {CartService} from './services/cart.service';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InstallComponent } from './pages/install/install.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const appRoutes: Routes = [
   { path: 'catalog', component: CatalogComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'install', component: InstallComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: HomeComponent }
 ];
@@ -22,11 +29,16 @@ const appRoutes: Routes = [
     HomeComponent,
     CatalogComponent,
     NotFoundComponent,
-    CartComponent
+    CartComponent,
+    InstallComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    CarouselModule.forRoot(),
+    CollapseModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [CartService],
   bootstrap: [AppComponent]

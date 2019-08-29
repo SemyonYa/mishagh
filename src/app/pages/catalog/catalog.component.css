@@ -36,7 +36,7 @@ h2 {
   justify-content: center;
   align-content: flex-start;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
 
   /*background-color: rgba(0,0,0,.2);*/
 }
