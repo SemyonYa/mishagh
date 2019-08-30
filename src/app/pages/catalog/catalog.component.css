@@ -1,19 +1,22 @@
+.catalog {
+  padding: 100px 10px 10px;
+}
+
 h2 {
   flex-basis: 80%;
   text-align: left;
 }
+
 .menu {
   position: fixed;
   top: 80px;
   left: 0;
-  width: 30vw;
+  width: 30%;
   height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
   align-content: flex-start;
   flex-wrap: wrap;
-
-  /*background-color: rgba(0,0,0,.1);*/
 }
 
 .menu-item {
@@ -24,27 +27,26 @@ h2 {
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .goods, .categories {
-  position: fixed;
-  top: 80px;
-  right: 0;
-  width: 70vw;
-  height: calc(100vh - 80px);
+  width: 70%;
+  margin-left: 30%;
   display: flex;
   justify-content: center;
   align-content: flex-start;
   flex-wrap: wrap;
-  /*overflow-y: scroll;*/
-
-  /*background-color: rgba(0,0,0,.2);*/
 }
+
 .goods-category {
   flex-basis: 100%;
   padding: 10px;
   border-bottom: solid 1px #555;
 }
+
 .good {
   display: flex;
   justify-content: center;
@@ -52,18 +54,40 @@ h2 {
   flex-wrap: wrap;
   width: 300px;
   height: 300px;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
   margin: 10px;
   text-align: center;
   background-color: white;
   cursor: pointer;
 }
+
 .good > * {
   flex-basis: 100%;
 }
+
 .category {
   flex-basis: 100%;
   border: solid 1px #555;
   cursor: pointer;
   margin: 10px;
+  padding: 10px;
+}
+
+
+@media (max-width: 1024px) {
+  .menu {
+    position: unset;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .menu-item {
+    flex-basis: 48%;
+  }
+
+  .goods, .categories {
+    width: 100%;
+    margin: 0;
+  }
 }

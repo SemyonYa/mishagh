@@ -1,22 +1,31 @@
-<!--<div class="wrap">-->
-<div class="menu">
-  <h2>Каталог товаров</h2>
-  <div class="menu-item" *ngFor="let cat of categories" (click)="showCategory(cat.id)">{{cat.name}}</div>
-</div>
-<div class="categories" *ngIf="!isCatalog">
-  <div class="category" *ngFor="let cat of categories" (click)="showCategory(cat.id)">
-    <h3>{{cat.name}}</h3>
+<div class="catalog">
+  <div class="menu">
+    <h2>Каталог товаров</h2>
+    <div class="menu-item" *ngFor="let cat of categories" (click)="showCategory(cat.id)">{{cat.name}}</div>
+  </div>
+  <div class="categories" *ngIf="!isCatalog">
+    <div class="category" *ngFor="let cat of categories">
+      <h3 (click)="showCategory(cat.id)">{{cat.name}}</h3>
+      <p>
+        Вибрирующий двигатель, трансмиссия и элементы подвески, а также неровности дороги и сопротивление воздушного
+        потока заставляют «звучать» детали кузова. Для снижения уровня шума, распространяющегося по деталям кузова
+        следует
+        обработать металлические детали кузова вибропоглощающим материалом.</p>
+
+      <p>Применение вибропоглощающих материалов позволяет снизить не только структурные, но и внешние шумы, а также
+        позволяет укрепить кузов, утеплить салон автомобиля и создать приятную акустику. Герметизирующие свойства
+        материалов позволяют защитить кузов от коррозии.</p>
+    </div>
+  </div>
+  <div class="goods" *ngIf="isCatalog">
+    <div class="goods-category">
+      <h3>{{currentCategory.name}}</h3>
+    </div>
+    <div class="good" *ngFor="let good of currentCategoryGoods" (click)="toCart(good.id, good.id * good.id)">
+      <h4>{{good.name}} (категория {{good.category}})</h4>
+      <p>{{good.description}}</p>
+      <p><b>{{good.price | currency:'RUB':'symbol-narrow' }}</b></p>
+    </div>
   </div>
 </div>
-<div class="goods" *ngIf="isCatalog">
-  <div class="goods-category">
-    <h3>{{currentCategory.name}}</h3>
-  </div>
-  <div class="good" *ngFor="let good of currentCategoryGoods" (click)="toCart(good.id, good.id * good.id)">
-    <h4>{{good.name}} (категория {{good.category}})</h4>
-    <p>{{good.description}}</p>
-    <p><b>{{good.price | currency:'RUB':'symbol-narrow' }}</b></p>
-  </div>
-</div>
-<!--</div>-->
 

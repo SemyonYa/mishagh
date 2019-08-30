@@ -12,15 +12,15 @@ carousel slide {
 }
 
 carousel slide:nth-child(1) {
-  background-image: url('../../../assets/img/bmw01.jpg');
+  background-image: url('/assets/img/bmw-01.jpg');
 }
 
 carousel slide:nth-child(2) {
-  background-image: url('../../../assets/img/bmw02.jpg');
+  background-image: url('/assets/img/bmw-02.jpg');
 }
 
 carousel slide:nth-child(3) {
-  background-image: url('../../../assets/img/bmw03.jpg');
+  background-image: url('/assets/img/bmw-03.jpg');
 }
 
 .carousel-caption {
@@ -28,98 +28,6 @@ carousel slide:nth-child(3) {
   /*border: solid 2px #7f251d;*/
   background-color: rgba(0, 0, 0, .4);
 }
-
-.static-block {
-  position: absolute;
-  top: 120px;
-  left: 40px;
-  width: 40vw;
-  padding: 10px;
-  border: solid 4px #7f251d;
-  background-color: rgba(0, 0, 0, .8);
-  color: #e4e4e4;
-}
-
-.block {
-  width: 100%;
-  height: 100vh;
-  background-color: #e4e4e4;
-  padding: 40px;
-  background-image: url('../../../assets/img/back_img2.svg');
-  background-size: cover;
-}
-
-.inner {
-  background-color: rgba(255, 255, 255, .7);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px 10px;
-}
-
-.hands, .calc {
-  flex-basis: 50%;
-  border: solid 1px #555;
-  height: 100%;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.hands h4, .calc h4 {
-  flex-basis: 100%;
-  /*text-align: center;*/
-}
-
-.icon {
-  width: 15vw;
-  height: 15vw;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  border: solid 1px #7f251d;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.icon:hover {
-  box-shadow: 0 0 10px 2px rgba(0,0,0,.2);
-}
-
-.hands .icon {
-  background-image: url('../../../assets/img/hand.svg');
-}
-
-.calc .icon {
-  background-image: url('../../../assets/img/calc.svg');
-}
-
-.text {
-  flex-basis: 100%;
-  font-size: 1.7vw;
-  padding: 10px 10%;
-}
-
-.button {
-  min-width: 30%;
-  border-radius: 0;
-  padding: 20px;
-  cursor: pointer;
-  font-weight: 600;
-  border: solid 1px #333;
-  background-color: #7f251d;
-  color: white;
-  transition: .3s;
-}
-.button:hover {
-  box-shadow: 0 0 10px 2px rgba(0,0,0,.2);
-}
-
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -149,4 +57,126 @@ carousel slide:nth-child(3) {
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+.static-block {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  width: 40vw;
+  padding: 10px;
+  border: solid 4px #7f251d;
+  background-color: rgba(0, 0, 0, .8);
+  color: #e4e4e4;
+}
+
+
+/**
+  SCREENS
+ */
+.block {
+  width: 100%;
+  height: 100vh;
+  background-color: #e4e4e4;
+  padding: 40px;
+  background-image: url('/assets/img/back_img2.svg');
+  background-size: cover;
+}
+
+.inner {
+  background-color: rgba(255, 255, 255, .7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.hands, .calc {
+  flex-basis: 50%;
+  border: solid 1px #555;
+  height: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.hands h4, .calc h4 {
+  flex-basis: 100%;
+  font-size: 2.2vw;
+  /*text-align: center;*/
+}
+
+.icon {
+  width: 15vw;
+  height: 15vw;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: solid 1px #7f251d;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.icon:hover {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+
+.hands .icon {
+  background-image: url('/assets/img/hand.svg');
+}
+
+.calc .icon {
+  background-image: url('/assets/img/calc2.svg');
+}
+
+.text {
+  flex-basis: 100%;
+  font-size: 1.7vw;
+  padding: 10px 10%;
+}
+
+.button {
+  min-width: 30%;
+  border-radius: 0;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  border: solid 1px #333;
+  background-color: #7f251d;
+  color: white;
+  transition: .3s;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+
+
+@media (max-width: 1024px) {
+  .inner {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .hands, .calc {
+    flex-basis: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .hands h4, .calc h4 {
+    font-size: 5vw;
+  }
+  .text {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .static-block {
+    width: 80vw;
+  }
 }

@@ -1,3 +1,9 @@
+.cart {
+  padding: 100px 10px 10px;
+
+  height: 100vh;
+}
+
 .good {
   width: 100px;
   height: 100px;
