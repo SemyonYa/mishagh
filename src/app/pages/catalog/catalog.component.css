@@ -1,5 +1,7 @@
 .catalog {
   padding: 100px 10px 10px;
+
+  min-height: 100vh;
 }
 
 h2 {
@@ -22,17 +24,24 @@ h2 {
 .menu-item {
   flex-basis: 80%;
   padding: 10px;
-  background-color: darkred;
-  color: white;
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: transparent;
+  color: darkred;
+  border: solid 1px darkred;
 }
 
-.goods, .categories {
+.menu-item.active {
+  background-color: darkred;
+  color: white;
+
+}
+
+.good-groups, .categories {
   width: 70%;
   margin-left: 30%;
   display: flex;
@@ -41,40 +50,60 @@ h2 {
   flex-wrap: wrap;
 }
 
-.goods-category {
+.good-groups-category {
   flex-basis: 100%;
   padding: 10px;
-  border-bottom: solid 1px #555;
 }
 
-.good {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
-  margin: 10px;
+h4 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.good-group-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.good-group-table td {
+  border-top: solid 1px #7f251d;
+  border-bottom: solid 1px #7f251d;
+  padding: 2px;
+}
+
+.good-group-table td:not(:first-child) {
   text-align: center;
-  background-color: white;
-  cursor: pointer;
 }
 
-.good > * {
-  flex-basis: 100%;
+.good-group-table td:first-child {
+  width: 30%;
+}
+
+.good-group-table thead td {
+  text-align: center;
+  font-weight: 600;
+  background-color: #7f251d;
+  color: #fefefe;
 }
 
 .category {
   flex-basis: 100%;
   border: solid 1px #555;
   cursor: pointer;
-  margin: 10px;
+  margin: 10px 0;
   padding: 10px;
 }
 
 
 @media (max-width: 1024px) {
+  .catalog {
+    padding: 100px 20px 20px;
+  }
+
   .menu {
     position: unset;
     width: 100%;
@@ -89,5 +118,41 @@ h2 {
   .goods, .categories {
     width: 100%;
     margin: 0;
+  }
+}
+@media (max-width: 450px) {
+  .catalog {
+    padding: 100px 7px 20px;
+  }
+  h2 {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .menu-item {
+    flex-basis: 100%;
+    padding: 5px;
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
+  }
+  .category {
+    text-align: center;
+  }
+  .good-groups {
+    margin: 0;
+    width: 100%;
+  }
+  .good-group-table {
+    font-size: 12px;
+  }
+  .btn-buy-group button {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .btn-buy-group input {
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 }

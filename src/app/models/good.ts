@@ -1,15 +1,11 @@
 export class Good {
   id: number;
   name: string;
-  description: string;
+  thickness: string;
+  size: string;
+  square: string;
   price: number;
-  category: number;
-
-  constructor(id: number, name: string, description: string, price: number, category: number) {
-    this.id = id;
-    this.name = name;
-    this.description = description;
-    this.price = price;
-    this.category = category;
-  }
+  length: string;
+  width: string;
+  goodGroupId: number;
 }

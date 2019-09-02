@@ -1,16 +1,44 @@
 .cart {
   padding: 100px 10px 10px;
 
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.good {
-  width: 100px;
-  height: 100px;
-  background-color: darkred;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-  cursor: pointer;
+.cart-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.cart-table td {
+  border-top: solid 1px #7f251d;
+  border-bottom: solid 1px #7f251d;
+  padding: 2px;
+}
+
+.cart-table td:not(:nth-child(2)) {
+  text-align: center;
+  width: 15%;
+}
+
+.cart-table td:first-child {
+  width: 5%;
+}
+
+.cart-table thead td {
+  text-align: center;
+  font-weight: 600;
+  background-color: #7f251d;
+  color: #fefefe;
+}
+.cart-table tfoot td {
+  text-align: center;
+}
+.cart-table tfoot td:first-child {
+  border-color: transparent;
+}
+.cart-table tfoot td:last-child {
+  border-width: 2px;
+  font-weight: 600;
+  color: #7f251d;
 }

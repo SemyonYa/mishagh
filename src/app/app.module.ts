@@ -13,12 +13,15 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InstallComponent } from './pages/install/install.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import {HttpClientModule} from '@angular/common/http';
+import { CategoryComponent } from './pages/category/category.component';
 
 const appRoutes: Routes = [
-  { path: 'catalog', component: CatalogComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'install', component: InstallComponent },
+  { path: 'catalog', component: CatalogComponent },
+  { path: 'category/:id', component: CategoryComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'install', component: InstallComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: HomeComponent }
 ];
@@ -31,11 +34,16 @@ const appRoutes: Routes = [
     NotFoundComponent,
     CartComponent,
     InstallComponent,
-    ContactComponent
+    ContactComponent,
+    CategoryComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {
+      scrollPositionRestoration: 'enabled',
+      useHash: true
+    }),
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),
     BrowserAnimationsModule

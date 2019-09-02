@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CartService} from '../../services/cart.service';
 
 @Component({
@@ -8,7 +8,17 @@ import {CartService} from '../../services/cart.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  slides = [
+    {image: 'assets/img/bmw-01.jpg'},
+    {image: 'assets/img/bmw-02.jpg'},
+    {image: 'assets/img/bmw-03.jpg'},
+    {image: 'assets/img/bmw-01.jpg'},
+    {image: 'assets/img/bmw-02.jpg'},
+    {image: 'assets/img/bmw-03.jpg'}
+  ];
+
+  constructor() {
+  }
 
   ngOnInit() {
 

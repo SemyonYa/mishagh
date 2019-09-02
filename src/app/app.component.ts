@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cartService.items.subscribe(data => this.counter = data.length);
+    this.cartService.items.subscribe(data => this.counter = (data) ? data.length : 0);
     this.menu
       .add(new MenuItem('Главная', '/'))
       .add(new MenuItem('Каталог', '/catalog'))
@@ -28,5 +28,9 @@ export class AppComponent implements OnInit {
 
   hideMobileMenu() {
     this.isCollapsed = true;
+  }
+
+  onActivate() {
+    // document.body.scrollTop = 0;
   }
 }

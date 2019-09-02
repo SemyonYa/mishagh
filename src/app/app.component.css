@@ -44,7 +44,7 @@ nav {
 .logo {
   height: 100%;
   width: 80px;
-  background-image: url('img/logo_sq.svg');
+  background-image: url('/assets/img/logo_sq.svg');
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -72,6 +72,9 @@ nav a:hover {
   background-color: #e4e4e4;
 }
 
+nav a.logo:hover {
+  background-color: transparent;
+}
 .active {
   background-color: darkred;
   color: white;
@@ -93,6 +96,27 @@ a.active:hover {
   border: none;
   outline: none!important;
 }
+.menu-mobile {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  z-index: 9999;
+  background-color: rgba(255,255,255,.9);
+}
+.menu-mobile-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu-mobile-items a {
+  flex-basis: 100%;
+  margin-bottom: 2px;
+  padding: 10px;
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
   .link {
     display: none;
@@ -100,7 +124,12 @@ a.active:hover {
   .menu-mobile-btn {
     display: unset;
   }
+  nav a.btn-cart {
+    width: 80px;
+    text-align: center;
+  }
 }
+
 
 /*
     scroll
@@ -140,28 +169,6 @@ body {
 .wrap {
   width: 100%;
   height: 100vh;
-  /*background-color: #e4e4e4;*/
-  /*overflow-y: auto;*/
-}
-.menu-mobile {
-  position: absolute;
-  top: 80px;
-  width: 100%;
-  z-index: 9999;
-  background-color: rgba(255,255,255,.9);
-}
-.menu-mobile-items {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.menu-mobile-items a {
-  flex-basis: 100%;
-  margin-bottom: 2px;
-  padding: 10px;
-  text-align: center;
 }
 
 footer {
@@ -196,19 +203,65 @@ footer > div {
 /**
   HOME PAGE
  */
-.carousel-indicators li {
+.home .carousel-indicators li {
   width: 60px;
   height: 4px;
 }
 
-.carousel-indicators .active {
+.home .carousel-indicators .active {
   background-color: #7f251d;
 }
 
-.carousel-control {
+.home .carousel-control {
   display: none;
 }
 
-.carousel-inner {
+.home .carousel-inner {
   background-color: rgba(0,0,0,.9);
+}
+
+
+/**
+  Catalog & Cart
+ */
+.btn-buy-group {
+  font-size: 14px;
+}
+
+.btn-buy-group button {
+  width: 20px;
+  margin: 4px 0;
+  padding: 2px;
+  background-color: #fefefe;
+  border-color: #7f251d;
+  color: #7f251d;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.btn-buy-group button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-buy-group button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-buy-group input {
+  margin: 4px 0;
+  padding: 2px;
+  outline: none;
+  width: 40px;
+  text-align: center;
+  border: none;
+  border-top: solid 1px #7f251d;
+  border-bottom: solid 1px #7f251d;
+}
+
+.btn-buy-group input::-webkit-outer-spin-button,
+.btn-buy-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

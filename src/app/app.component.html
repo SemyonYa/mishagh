@@ -1,7 +1,7 @@
 <div class="wrap">
   <nav>
-    <a routerLink="/">
-      <span class="logo"></span>
+    <a routerLink="/" class="logo">
+      <span></span>
     </a>
 
     <div class="links">
@@ -9,7 +9,7 @@
       <button class="menu-mobile-btn" (click)="isCollapsed = !isCollapsed"
               [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">&#9776;</button>
     </div>
-    <a routerLink="/cart" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Корзина ({{counter}})</a>
+    <a class="btn-cart" routerLink="/cart" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Корзина ({{counter}})</a>
   </nav>
   <div class="menu-mobile">
     <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">

@@ -1,5 +1,5 @@
 <div class="home">
-  <carousel [interval]="50000" [pauseOnFocus]="false" [noPause]="true">
+  <carousel class="main" [interval]="50000" [pauseOnFocus]="false" [noPause]="true">
     <slide class="animated fadeIn">
       <div class="carousel-caption">
         <h3>ВИБРОИЗОЛЯЦИЯ</h3>
@@ -25,7 +25,31 @@
     <h2>Профессиональная шумоизоляция</h2>
   </div>
 
-  <div class="block">
+  <div class="block block-about">
+    <div class="caption">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna
+      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="slider">
+      <carousel [itemsPerSlide]="4"
+                [singleSlideOffset]="true"
+                [interval]="false"
+                [noWrap]="true">
+        <slide *ngFor="let slide of slides; let index=index">
+          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+          <div class="carousel-caption">
+            <!--<h4>Slide {{index}}</h4>-->
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+
+  <div class="block block-hand-calc">
     <div class="inner">
       <div class="hands">
         <h4>Своими руками</h4>
@@ -40,16 +64,5 @@
         <a routerLink="/catalog" class="button">Перейти в раздел</a>
       </div>
     </div>
-  </div>
-  <div class="block">
-    <div class="caption">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna
-      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="slider"></div>
   </div>
 </div>

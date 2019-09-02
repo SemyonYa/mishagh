@@ -1,31 +1,24 @@
-import { Injectable } from '@angular/core';
-import {Good} from '../models/good';
-import {Category} from '../models/category';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private host = 'http://vikar.injini.ru/';
-  constructor() { }
-
-  getGoods(): Good[] {
-    let goods: Good[] = [];
-    for (let i = 1; i < 16; i++) {
-      goods.push(new Good(i, `Товар ${i}`, `Описание товара ${i}`, i * i * 58, i % 4 + 1))
-    }
-    return goods;
-  }
-  getGood(id: number): Good {
-    return new Good(111, `Полученный товар`, `Данный товар получен по его идентификатору ${id}`, 10500, 5);
+  private host = environment.host;
+  constructor(private http: HttpClient) {
   }
 
-  getCategories(): Category[] {
-    return [
-      new Category(1, 'Вибропоглощающие материалы'),
-      new Category(2, 'Шумо-теплоизолирующие материалы'),
-      new Category(3, 'Антискрипскрипные материалы'),
-      new Category(4, 'Гидроизолирующие и герметизирующие материалы')
-    ];
+  getCategories() {
+    return this.http.get(this.host + '/categories');
+  }
+
+  getGoodGroups() {
+    return this.http.get(this.host + '/good-groups');
+  }
+
+  getGoods() {
+    return this.http.get(this.host + '/goods');
   }
 }

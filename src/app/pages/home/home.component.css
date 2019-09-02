@@ -1,8 +1,8 @@
-carousel {
+carousel.main {
   background-color: darkgreen;
 }
 
-carousel slide {
+carousel.main slide {
   width: 100vw;
   height: 100vh;
   outline: none;
@@ -11,19 +11,19 @@ carousel slide {
   background-position-y: center;
 }
 
-carousel slide:nth-child(1) {
+carousel.main slide:nth-child(1) {
   background-image: url('/assets/img/bmw-01.jpg');
 }
 
-carousel slide:nth-child(2) {
+carousel.main slide:nth-child(2) {
   background-image: url('/assets/img/bmw-02.jpg');
 }
 
-carousel slide:nth-child(3) {
+carousel.main slide:nth-child(3) {
   background-image: url('/assets/img/bmw-03.jpg');
 }
 
-.carousel-caption {
+carousel.main .carousel-caption {
   bottom: 60px;
   /*border: solid 2px #7f251d;*/
   background-color: rgba(0, 0, 0, .4);
@@ -72,15 +72,18 @@ carousel slide:nth-child(3) {
 
 
 /**
-  SCREENS
+  SCREEN HAND-CALC
  */
 .block {
   width: 100%;
   height: 100vh;
-  background-color: #e4e4e4;
   padding: 40px;
-  background-image: url('/assets/img/back_img2.svg');
   background-size: cover;
+}
+
+.block-hand-calc {
+  background-color: #e4e4e4;
+  background-image: url('/assets/img/back_img2.svg');
 }
 
 .inner {
@@ -156,20 +159,62 @@ carousel slide:nth-child(3) {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
 }
 
+/**
+  SCREEN ABOUT
+ */
+.block-about {
+  padding: 100px 50px 50px;
+  background-image: url('/assets/img/back_img2.svg');
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.caption {
+  width: 70%;
+  padding: 40px;
+  border-radius: 10px;
+  border: solid 1px #333;
+  background-color: rgba(255,255,255,.7);
+  font-size: 1.4vw;
+}
+
+.slider {
+  width: 75%;
+  margin-left: 25%;
+  /*border: solid 1px darkred;*/
+  padding: 50px 0;
+}
+
+
+
 
 @media (max-width: 1024px) {
+  .block {
+    height: auto;
+  }
+
   .inner {
     flex-wrap: wrap;
     padding: 20px;
   }
+
   .hands, .calc {
     flex-basis: 100%;
     height: auto;
     padding: 20px;
   }
+
   .hands h4, .calc h4 {
     font-size: 5vw;
   }
+
+  .icon {
+    width: 30vw;
+    height: 30vw;
+  }
+
   .text {
     font-size: 3vw;
   }
