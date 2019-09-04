@@ -19,26 +19,13 @@ export class CartComponent implements OnInit {
   constructor(private cartService: CartService, private data: DataService) {
   }
 
-  // ngOnInit() {
-  //   this.cartService.items.subscribe(data => this.items = data);
-  //   this.data.getGoods().subscribe(
-  //     (gs: Good[]) => {
-  //       this.goods = gs;
-  //       for (const cartItem of this.items) {
-  //         const currentCartItem = new CartItemWithGood(gs.find(g => g.id === cartItem.id), cartItem.q);
-  //         this.sumAll += currentCartItem.sum();
-  //         this.goodItems.push(currentCartItem);
-  //       }
-  //     }
-  //   );
-  // }
-
   ngOnInit() {
     this.data.getGoods().subscribe(
       (gs: Good[]) => {
         this.goods = gs;
         this.cartService.items.subscribe(data => {
           this.goodItems = [];
+          this.sumAll = 0;
           for (const cartItem of data) {
             const currentCartItem = new CartItemWithGood(gs.find(g => g.id === cartItem.id), cartItem.q);
             this.sumAll += currentCartItem.sum();

@@ -200,6 +200,25 @@ carousel.main .carousel-caption {
     padding: 20px;
   }
 
+  .block-about {
+    padding: 100px 0 20px;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .caption {
+    width: 80%;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .slider {
+    width: 100%;
+    margin: 0;
+  }
+
+  .block-hand-calc {
+    padding: 100px 20px;
+  }
   .hands, .calc {
     flex-basis: 100%;
     height: auto;
@@ -210,6 +229,9 @@ carousel.main .carousel-caption {
     font-size: 5vw;
   }
 
+  /*.calc {*/
+    /*margin-top: 20px;*/
+  /*}*/
   .icon {
     width: 30vw;
     height: 30vw;
@@ -218,6 +240,7 @@ carousel.main .carousel-caption {
   .text {
     font-size: 3vw;
   }
+
 }
 
 @media (max-width: 768px) {
