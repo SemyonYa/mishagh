@@ -9,6 +9,7 @@ carousel.main slide {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
+  transition: 1s;
 }
 
 carousel.main slide:nth-child(1) {
@@ -22,10 +23,16 @@ carousel.main slide:nth-child(2) {
 carousel.main slide:nth-child(3) {
   background-image: url('/assets/img/bmw-03.jpg');
 }
-
+carousel.main slide::after {
+  content: url('/assets/img/waves-05.svg');
+  opacity: .8;
+  transition: 1s;
+}
+carousel.main slide:hover::after {
+  opacity: .3;
+}
 carousel.main .carousel-caption {
   bottom: 60px;
-  /*border: solid 2px #7f251d;*/
   background-color: rgba(0, 0, 0, .4);
 }
 

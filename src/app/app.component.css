@@ -9,7 +9,7 @@ a {
 a:hover {
   color: #7f251d;
   text-decoration: none;
-  font-weight: 600;
+  /*font-weight: 600;*/
 }
 button {
   background-color: darkred;
@@ -264,4 +264,18 @@ footer > div {
 .btn-buy-group input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/***
+  MODAL
+ */
+.modal-dialog {
+  margin-top: 100px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 800px;
+    text-align: center;
+  }
 }

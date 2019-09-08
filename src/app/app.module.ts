@@ -15,6 +15,10 @@ import { InstallComponent } from './pages/install/install.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CategoryComponent } from './pages/category/category.component';
+import { InstallItemComponent } from './pages/install-item/install-item.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+import {BsDropdownModule} from 'ngx-bootstrap';
 
 const appRoutes: Routes = [
   { path: 'cart', component: CartComponent },
@@ -36,6 +40,10 @@ const appRoutes: Routes = [
     InstallComponent,
     ContactComponent,
     CategoryComponent,
+    InstallItemComponent,
+  ],
+  entryComponents: [
+    InstallItemComponent
   ],
   imports: [
     HttpClientModule,
@@ -44,8 +52,11 @@ const appRoutes: Routes = [
       scrollPositionRestoration: 'enabled',
       useHash: true
     }),
+    BsDropdownModule.forRoot(),
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),
+    ModalModule.forRoot(),
+    PopoverModule.forRoot(),
     BrowserAnimationsModule
   ],
   providers: [CartService],

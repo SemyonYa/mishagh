@@ -1,5 +1,19 @@
  .install {
    padding: 100px 10px 10px;
 
-   height: 100vh;
+   min-height: 100vh;
+ }
+ .install-items {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+ }
+ .install-item {
+   flex-basis: 100%;
+   padding: 10px;
+   margin: 10px 0;
+   cursor: pointer;
+   background-color: #e4e4e4;
  }

@@ -1,0 +1,136 @@
+.install-item {
+  width: 100%;
+  /*min-height: 100vh;*/
+  padding: 3px 10px 10px;
+}
+
+.install-item > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.install-item > div > * {
+  flex-basis: 100%;
+}
+
+h2 {
+  padding-top: 10px;
+  color: #7f251d;
+}
+
+.goods {
+  /*width: 100%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.good {
+  flex-basis: 100%;
+  padding: 5px;
+  vertical-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url('/assets/img/close.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.info-btn {
+  width: 15px;
+  height: 15px;
+  background-image: url('/assets/img/info.svg');
+  background-size: contain;
+  float: right;
+  cursor: pointer;
+}
+
+.info-btn-button {
+  padding: 3px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.dropdown-menu {
+  width: 44px;
+  padding: 0;
+  min-width: unset;
+  /*padding: 5px;*/
+}
+
+.ddm-btn {
+  padding: 0;
+  margin: 3px;
+  float: left;
+}
+
+li > a {
+  padding: 0;
+}
+
+.works {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.works > * {
+  flex-basis: 80%;
+}
+
+.work-item {
+  /*margin-bottom: 5px;*/
+}
+
+.work-item-inner {
+  border-top: solid 1px #7f251d;
+  border-bottom: solid 1px #7f251d;
+  padding: 10px;
+}
+
+.work-item:not(:last-child)::after {
+  content: url(/assets/img/arrow.svg);
+  width: 100px;
+}
+
+.as-result {
+  width: 100%;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-ok {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/img/ok.svg');
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.result span {
+  padding: 5px;
+
+}

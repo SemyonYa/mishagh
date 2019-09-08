@@ -1,0 +1,46 @@
+<div class="install-item">
+  <div *ngIf="installItemView">
+    <div class="close-btn" (click)="bsModalRef.hide()"></div>
+    <h2>{{installItemView.name}}</h2>
+    <h4>Применяемые материалы:</h4>
+    <div class="goods">
+      <div class="good" *ngFor="let good of installItemView.goods">
+        <span>{{good.good.name}} - {{good.quantity}}</span>
+        <div class="btn-group" dropdown [dropup]="true">
+          <button id="button-basic" dropdownToggle type="button" class="info-btn-button"
+                  aria-controls="dropdown-basic">
+            <span class="info-btn"></span>
+          </button>
+          <div id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-basic">
+            <span class="ddm-btn info-btn" role="menuitem" (click)="toCart(good.good.id, good.quantity)" title="Добавить в корзину"></span>
+            <span class="ddm-btn info-btn" role="menuitem" (click)="goToCategory(good.good.goodGroupId)" title="Перейти к разделу с товаром"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h4>Порядок проведения работ</h4>
+    <div class="works">
+      <div class="work-item" *ngFor="let work of installItemView.works">
+        <div class="work-item-inner">{{work}}</div>
+      </div>
+    </div>
+    <hr>
+    <h4>Рекомендации</h4>
+    <div class="recoms">
+      <div class="recom" *ngFor="let recom of installItemView.recommendations">{{recom}}</div>
+    </div>
+    <hr>
+    <h4>В итоге</h4>
+    <div class="as-result">
+      <div class="result" *ngFor="let res of installItemView.asResult">
+        <span class="result-ok"></span>
+        <span>{{res}}</span>
+      </div>
+    </div>
+    <hr>
+
+  </div>
+</div>
+

@@ -23,8 +23,19 @@ h2 {
   cursor: pointer;
   margin: 20px 0;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  background-image: url('/assets/img/vibro.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
-
+.category > * {
+  flex-basis: 100%;
+}
 
 @media (max-width: 1024px) {
   .catalog {
@@ -45,4 +56,37 @@ h2 {
   .category {
     text-align: center;
   }
+}
+
+
+
+/*IMG*/
+.imgs {
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  margin: 3px;
+  background-size: cover;
+  background-position: center center;
+}
+.img:nth-child(1)::after {
+  content: url('/assets/img/waves-01.svg');
+  transition: 1s;
+}
+.img:nth-child(2)::after {
+   content: url('/assets/img/wave-points.svg');
+  transition: 1s;
+ }
+.img:nth-child(3)::after {
+  content: url('/assets/img/waves-03.svg');
+  transition: 1s;
+}
+.img:hover::after {
+  opacity: .3;
+  /*transform: rotate(50deg);*/
 }
