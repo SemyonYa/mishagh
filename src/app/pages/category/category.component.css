@@ -59,10 +59,12 @@ h4 {
   margin-top: 20px;
   margin-bottom: 0;
 }
+
 hr {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
 .good-group-table {
   width: 100%;
   border-collapse: separate;
@@ -98,6 +100,11 @@ hr {
   padding: 10px;
 }
 
+.btn-buy-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (max-width: 1024px) {
   .catalog {
@@ -115,19 +122,47 @@ hr {
     flex-basis: 48%;
   }
 
+  .good-groups {
+    margin: 0;
+    width: 100%;
+  }
+
   .goods, .categories {
     width: 100%;
     margin: 0;
   }
+
+  .btn-buy-group {
+    flex-wrap: wrap-reverse;
+  }
+
+  .btn-buy-group > input {
+    flex-basis: 100%;
+  }
+
+  .btn-buy-group button {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn-buy-group input {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
+
 @media (max-width: 450px) {
   .catalog {
     padding: 100px 7px 20px;
   }
+
   h2 {
     flex-basis: 100%;
     text-align: center;
   }
+
   .menu-item {
     flex-basis: 100%;
     padding: 5px;
@@ -135,24 +170,13 @@ hr {
     justify-content: center;
     text-align: center;
   }
+
   .category {
     text-align: center;
   }
-  .good-groups {
-    margin: 0;
-    width: 100%;
-  }
+
   .good-group-table {
     font-size: 12px;
   }
-  .btn-buy-group button {
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-  }
-  .btn-buy-group input {
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
+
 }

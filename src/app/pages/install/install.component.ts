@@ -3,11 +3,13 @@ import {DataService} from '../../services/data.service';
 import {InstallItem} from '../../models/install-item';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {InstallItemComponent} from '../install-item/install-item.component';
+import {fromDownShowAnimation} from '../../app.animations';
 
 @Component({
   selector: 'app-install',
   templateUrl: './install.component.html',
-  styleUrls: ['./install.component.css']
+  styleUrls: ['./install.component.css'],
+  animations: [ fromDownShowAnimation ]
 })
 export class InstallComponent implements OnInit {
   installItems: InstallItem[] = [];
@@ -28,5 +30,6 @@ export class InstallComponent implements OnInit {
     const initialState = { id };
     this.bsModalRef = this.modalService.show(InstallItemComponent, {initialState});
   }
+
 
 }

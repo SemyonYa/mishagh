@@ -1,14 +1,18 @@
 <div class="catalog">
   <h2>Каталог товаров</h2>
   <div class="categories">
-    <div class="category" *ngFor="let cat of categories" routerLink="/category/{{cat.id}}">
+    <div
+      class="category"
+      *ngFor="let cat of categories"
+    >
       <div class="imgs">
-        <div class="img" style="background-image: url('/assets/img/bmw-01.jpg')"></div>
-        <div class="img" style="background-image: url('/assets/img/bmw-02.jpg')"></div>
-        <div class="img" style="background-image: url('/assets/img/bmw-03.jpg')"></div>
+        <div @img2ShowAnimation class="img" style="background-image: url('/assets/img/bmw-01.jpg')"></div>
+        <div @img2ShowAnimation class="img" style="background-image: url('/assets/img/bmw-02.jpg')"></div>
+        <div @img2ShowAnimation class="img" style="background-image: url('/assets/img/bmw-03.jpg')"></div>
       </div>
       <h3>{{cat.name}}</h3>
       <p>{{cat.description}}</p>
+      <h5><a routerLink="/category/{{cat.id}}">Посмотреть товары...</a></h5>
     </div>
   </div>
 </div>

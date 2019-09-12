@@ -55,6 +55,7 @@ h2 {
   align-items: center;
   flex-wrap: wrap;
   border: solid 1px #e4e4e4;
+  margin: 10px;
 }
 
 .shop-name, .shop-address, .shop-phone {
@@ -69,7 +70,7 @@ h2 {
 
 .map iframe {
   width: 100%;
-  height: 50vh;
+  height: 100%;
 }
 
 @media (max-width: 1023px) {
@@ -97,4 +98,10 @@ h2 {
     flex-basis: 100%;
   }
 
+}
+
+@media (orientation: portrait) {
+  .map {
+    height: 100vw;
+  }
 }

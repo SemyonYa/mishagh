@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {CartService} from '../../services/cart.service';
+import {imgShowAnimation} from '../../app.animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [ imgShowAnimation ]
 })
 export class HomeComponent implements OnInit {
 
@@ -12,9 +13,9 @@ export class HomeComponent implements OnInit {
     {image: 'assets/img/bmw-01.jpg'},
     {image: 'assets/img/bmw-02.jpg'},
     {image: 'assets/img/bmw-03.jpg'},
-    {image: 'assets/img/bmw-01.jpg'},
-    {image: 'assets/img/bmw-02.jpg'},
-    {image: 'assets/img/bmw-03.jpg'}
+    {image: 'assets/img/bmw-01.jpg'}
+    // {image: 'assets/img/bmw-02.jpg'},
+    // {image: 'assets/img/bmw-03.jpg'}
   ];
 
   constructor() {

@@ -12,7 +12,11 @@
         <h4>{{gg.goodGroup.name}}</h4>
         <hr>
         <!--Вибропоглощающие материалы-->
-        <table class="good-group-table" *ngIf="(currentCategory.n == 1) || (currentCategory.n == 4)">
+        <table
+          @fromDownShowAnimation
+          *ngIf="(currentCategory.n == 1) || (currentCategory.n == 4)"
+          class="good-group-table"
+        >
           <thead>
           <tr>
             <td>Наименование</td>
@@ -42,7 +46,11 @@
         </table>
 
         <!--Шумоизоляция, теплоизоляция, шумо-теплоизолирующие материалы-->
-        <table class="good-group-table" *ngIf="currentCategory.n == 2">
+        <table
+          @fromDownShowAnimation
+          *ngIf="currentCategory.n == 2"
+          class="good-group-table"
+        >
           <thead>
           <tr>
             <td>Наименование</td>
@@ -72,7 +80,11 @@
         </table>
 
         <!--Антискрипскрипные материалы-->
-        <table class="good-group-table" *ngIf="currentCategory.n == 3">
+        <table
+          @fromDownShowAnimation
+          *ngIf="currentCategory.n == 3"
+          class="good-group-table"
+        >
           <thead>
           <tr>
             <td>Наименование</td>
@@ -98,6 +110,7 @@
           </tr>
           </tbody>
         </table>
+
       </div>
     </div>
   </div>

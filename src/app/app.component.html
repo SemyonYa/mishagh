@@ -1,38 +1,42 @@
-<div class="wrap">
+<div class="wrap" >
   <nav>
     <a routerLink="/" class="logo">
       <span></span>
     </a>
 
     <div class="links">
-      <a class="link" *ngFor="let item of menu" routerLink="{{item.link}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{item.title}}</a>
+      <a class="link" *ngFor="let item of menu" routerLink="{{item.link}}" routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact: true}">{{item.title}}</a>
       <button class="menu-mobile-btn" (click)="isCollapsed = !isCollapsed"
-              [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">&#9776;</button>
+              [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">&#9776;
+      </button>
     </div>
-    <a class="btn-cart" routerLink="/cart" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Корзина ({{counter}})</a>
+    <a class="btn-cart" routerLink="/cart" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Корзина
+      ({{counter}})</a>
   </nav>
   <div class="menu-mobile">
     <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
       <div class="menu-mobile-items">
-        <a *ngFor="let item of menu" routerLink="{{item.link}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="hideMobileMenu()">{{item.title}}</a>
+        <a *ngFor="let item of menu" routerLink="{{item.link}}" routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: true}" (click)="hideMobileMenu()">{{item.title}}</a>
       </div>
     </div>
   </div>
   <router-outlet></router-outlet>
   <footer>
     <div>
-      <h4>left</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <!--<h5>Более подробная информация о компании, условиях предоставления услуг и сотрудничесиве</h5>-->
+      <div class="footer-body">
+        <h6><a href="#">Магазинам</a></h6>
+        <h6><a href="#">Условия доставки</a></h6>
+      </div>
     </div>
     <div>
-      <h4>right</h4>
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <div class="footer-body">
+        <img src="/assets/img/logo_sq.svg" class="footer-logo" />
+        <span>VIKAR-AUTO</span>
+        <!--<span>&copy; 2010 - 2019</span>-->
+      </div>
     </div>
   </footer>
 </div>

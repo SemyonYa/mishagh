@@ -1,19 +1,103 @@
- .install {
-   padding: 100px 10px 10px;
+.install {
+  padding: 100px 10px 10px;
+  text-align: center;
+  /*min-height: 100vh;*/
+}
 
-   min-height: 100vh;
- }
- .install-items {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
- }
- .install-item {
-   flex-basis: 100%;
-   padding: 10px;
-   margin: 10px 0;
-   cursor: pointer;
-   background-color: #e4e4e4;
- }
+h3 {
+  padding-top: 20px;
+}
+
+.text, .as-result {
+  border-top: solid 1px #e4e4e4;
+  border-bottom: solid 1px #e4e4e4;
+  padding: 10px 10px;
+  margin: 0 10vw 20px;
+}
+
+.install-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.install-item {
+  /*flex-basis: 100%;*/
+  width: 25vw;
+  height: 25vw;
+  margin: 10px;
+  /*padding: 10px;*/
+  /*margin: 10px 0;*/
+  cursor: pointer;
+  background-color: #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.install-item:nth-child(2n + 1) {
+  background-image: url('/assets/img/bmw-01.jpg');
+}
+
+.install-item:nth-child(2n + 2) {
+  background-image: url('/assets/img/bmw-02.jpg');
+}
+
+.install-item:nth-child(2n + 3) {
+  background-image: url('/assets/img/bmw-03.jpg');
+}
+
+.install-item h5 {
+  background-color: rgba(255, 255, 255, .8);
+  flex-basis: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.as-result {
+  margin: 0;
+}
+.as-result-item {
+  padding: 10px;
+  /*border: solid 1px #e4e4e4;*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.as-result-item-ok {
+  flex-basis: 5%;
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/img/ok2.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  margin-right: 20px;
+}
+.as-result-item-ok {
+  /*flex-basis: 5%;*/
+  width: 20px;
+  height: 20px;
+  /*background-image: url('/assets/img/ok2.svg');*/
+  /*background-size: contain;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: right center;*/
+  margin-right: 20px;
+}
+.as-result-item-text {
+  padding-left: 10px;
+  width: 100%;
+  /*text-align: left;*/
+}
+
+@media (orientation: portrait), (max-width: 768px) {
+  .install-item {
+    width: 70vw;
+    height: 70vw;
+  }
+  .as-result-item-ok {
+    flex-basis: 10%;
+  }
+}

@@ -170,31 +170,38 @@ carousel.main .carousel-caption {
   SCREEN ABOUT
  */
 .block-about {
-  padding: 100px 50px 50px;
+  padding: 100px 0px 0px;
   background-image: url('/assets/img/back_img2.svg');
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .caption {
-  width: 70%;
-  padding: 40px;
+  width: 95%;
+  padding: 10px 40px;
   border-radius: 10px;
   border: solid 1px #333;
   background-color: rgba(255,255,255,.7);
-  font-size: 1.4vw;
+  font-size: 1.2vw;
+  text-align: center;
 }
 
 .slider {
-  width: 75%;
-  margin-left: 25%;
-  /*border: solid 1px darkred;*/
-  padding: 50px 0;
+  width: 100%;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.slider-item {
+  width: 25vw;
+  height: 25vw;
+  background-size: cover;
 
+}
 
 
 @media (max-width: 1024px) {
@@ -208,7 +215,7 @@ carousel.main .carousel-caption {
   }
 
   .block-about {
-    padding: 100px 0 20px;
+    padding: 40px 0 0;
     justify-content: center;
     min-height: 100vh;
   }
@@ -253,5 +260,21 @@ carousel.main .carousel-caption {
 @media (max-width: 768px) {
   .static-block {
     width: 80vw;
+  }
+}
+
+@media (orientation: portrait) {
+  carousel.main slide::after {
+    padding-top: 50vh;
+  }
+  .caption {
+    font-size: 3vw;
+  }
+  .slider {
+    flex-wrap: wrap;
+  }
+  .slider-item {
+    width: 50vw;
+    height: 50vw;
   }
 }

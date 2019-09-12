@@ -14,7 +14,14 @@
   </div>
   <h3>Проклейка автомобиля</h3>
   <div class="install-items">
-    <div (click)="openInstallItemModal(ii.id)" class="install-item" *ngFor="let ii of installItems">{{ii.name}}</div>
+    <div
+      @fromDownShowAnimation
+      *ngFor="let ii of installItems"
+      (click)="openInstallItemModal(ii.id)"
+      class="install-item"
+    >
+      <h5>{{ii.name}}</h5>
+    </div>
   </div>
   <h3>Заключительный этап</h3>
   <div class="text">Далее производится сборка салона автомобиля. Клипсы желательно применять новые. Весь комплекс
@@ -26,23 +33,62 @@
   </div>
   <h3>В итоге</h3>
   <div class="as-result">
-    <div class="as-result-item">Снижается шум от трения колес о дорожное покрытие, от ударов различных частиц (песка,
+    <div class="as-result-item">
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Снижается шум от трения колес о дорожное покрытие, от ударов различных частиц (песка,
       гравия и т.д.) дорожного полотна о днище автомобиля. Обеспечивается защита от проникновения в салон шума
-      работающего двигателя, коробки передач и глушителя.
+        работающего двигателя, коробки передач и глушителя.</span>
     </div>
-    <div class="as-result-item">Приятное звучание акустики.</div>
     <div class="as-result-item">
-      Теплоизоляция салона. Быстрый прогрев салона в зимнее время и медленный нагрев в летнее время.
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Приятное звучание акустики.</span>
     </div>
-    <div class="as-result-item">Глухое закрывание капота и дверей.</div>
-    <div class="as-result-item">Защита от продувания дверей.</div>
-    <div class="as-result-item">Снижение структурных вибраций.</div>
-    <div class="as-result-item">Исчезает эффект «барабана» при дожде и граде.</div>
-    <div class="as-result-item">Комфортное вождение автомобиля.</div>
-    <div class="as-result-item">Исчезновение скрипов и дребезгов.</div>
-    <div class="as-result-item">Увеличение времени остывания двигателя в зимнее время.</div>
     <div class="as-result-item">
-      Исчезает возможность образования конденсата на крыше со стороны салона в зимнее время.
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Теплоизоляция салона. Быстрый прогрев салона в зимнее время и медленный нагрев в летнее время</span>
+    </div>
+    <div class="as-result-item">
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Глухое закрывание капота и дверей</span>
+    </div>
+    <div class="as-result-item">
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Защита от продувания дверей</span>
+    </div>
+    <div class="as-result-item">
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Снижение структурных вибраций</span>
+    </div>
+    <div class="as-result-item">
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Исчезает эффект «барабана» при дожде и граде</span>
+    </div>
+    <div class="as-result-item">
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Комфортное вождение автомобиля</span>
+    </div>
+    <div class="as-result-item">
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span>Исчезновение скрипов и дребезгов</span>
+    </div>
+    <div class="as-result-item">
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Увеличение времени остывания двигателя в зимнее время</span>
+    </div>
+    <div class="as-result-item">
+      <!--<img src="/assets/img/ok2.svg" class="as-result-item-ok2" />-->
+      <!--<span class="as-result-item-ok"></span>-->
+      <span class="as-result-item-text">Исчезает возможность образования конденсата на крыше со стороны салона в зимнее время</span>
     </div>
   </div>
 </div>

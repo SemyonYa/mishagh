@@ -30,6 +30,10 @@ export class AppComponent implements OnInit {
     this.isCollapsed = true;
   }
 
+  hideMobileMenuDelaied(e) {
+    // $(e.target).
+  }
+
   onActivate() {
     // document.body.scrollTop = 0;
   }

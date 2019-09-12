@@ -8,11 +8,13 @@ import {DataService} from '../../services/data.service';
 import {CartService} from '../../services/cart.service';
 import {GoodView} from '../../models/view/good-view';
 import {ActivatedRoute} from '@angular/router';
+import {fromDownShowAnimation} from '../../app.animations';
 
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  styleUrls: ['./category.component.css'],
+  animations: [ fromDownShowAnimation ]
 })
 export class CategoryComponent implements OnInit {
   isCatalog = true;

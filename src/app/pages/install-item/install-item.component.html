@@ -5,7 +5,6 @@
     <h4>Применяемые материалы:</h4>
     <div class="goods">
       <div class="good" *ngFor="let good of installItemView.goods">
-        <span>{{good.good.name}} - {{good.quantity}}</span>
         <div class="btn-group" dropdown [dropup]="true">
           <button id="button-basic" dropdownToggle type="button" class="info-btn-button"
                   aria-controls="dropdown-basic">
@@ -13,10 +12,11 @@
           </button>
           <div id="dropdown-basic" *dropdownMenu class="dropdown-menu"
               role="menu" aria-labelledby="button-basic">
-            <span class="ddm-btn info-btn" role="menuitem" (click)="toCart(good.good.id, good.quantity)" title="Добавить в корзину"></span>
-            <span class="ddm-btn info-btn" role="menuitem" (click)="goToCategory(good.good.goodGroupId)" title="Перейти к разделу с товаром"></span>
+            <span class="ddm-btn info-btn cart-btn" role="menuitem" (click)="toCart(good.good.id, good.quantity)" title="Добавить в корзину"></span>
+            <span class="ddm-btn info-btn goto-btn" role="menuitem" (click)="goToCategory(good.good.goodGroupId)" title="Перейти к разделу с товаром"></span>
           </div>
         </div>
+        <span>{{good.good.name}} - {{good.quantity}}</span>
       </div>
     </div>
     <hr>

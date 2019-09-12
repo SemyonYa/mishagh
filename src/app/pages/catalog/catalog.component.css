@@ -12,31 +12,55 @@ h2 {
 .categories {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-content: flex-start;
   flex-wrap: wrap;
 }
 
 .category {
-  flex-basis: 49%;
-  border: solid 1px #555;
-  cursor: pointer;
-  margin: 20px 0;
+  width: 400px;
+  margin: 15px;
   padding: 10px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
+  align-items: center;
+  /*align-content: center;*/
   flex-wrap: wrap;
-  background-image: url('/assets/img/vibro.svg');
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+  text-align: center;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, .2);
 }
+
 .category > * {
   flex-basis: 100%;
 }
 
+.imgs {
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, .3);
+}
+
+.img {
+  width: 140px;
+  height: 140px;
+  margin: 2px;
+  background-size: cover;
+  background-position: center center;
+  /*filter: blur(5px);*/
+}
+
+.img:nth-child(2) {
+  margin: 2px 0;
+}
+
+.category h5 {
+  /*cursor: pointer;*/
+}
 @media (max-width: 1024px) {
   .catalog {
     padding: 100px 20px 20px;
@@ -54,39 +78,29 @@ h2 {
   }
 
   .category {
-    text-align: center;
+    width: 320px;
+  }
+  .img {
+    width: 110px;
+    height: 110px;
   }
 }
 
 
-
 /*IMG*/
-.imgs {
-  align-self: flex-end;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.img {
-  width: 150px;
-  height: 150px;
-  margin: 3px;
-  background-size: cover;
-  background-position: center center;
-}
-.img:nth-child(1)::after {
-  content: url('/assets/img/waves-01.svg');
-  transition: 1s;
-}
-.img:nth-child(2)::after {
-   content: url('/assets/img/wave-points.svg');
-  transition: 1s;
- }
-.img:nth-child(3)::after {
-  content: url('/assets/img/waves-03.svg');
-  transition: 1s;
-}
-.img:hover::after {
-  opacity: .3;
-  /*transform: rotate(50deg);*/
-}
+/*.img:nth-child(1)::after {*/
+/*content: url('/assets/img/waves-01.svg');*/
+/*transition: 1s;*/
+/*}*/
+/*.img:nth-child(2)::after {*/
+/*content: url('/assets/img/wave-points.svg');*/
+/*transition: 1s;*/
+/*}*/
+/*.img:nth-child(3)::after {*/
+/*content: url('/assets/img/waves-03.svg');*/
+/*transition: 1s;*/
+/*}*/
+/*.img:hover::after {*/
+/*opacity: .3;*/
+/*!*transform: rotate(50deg);*!*/
+/*}*/

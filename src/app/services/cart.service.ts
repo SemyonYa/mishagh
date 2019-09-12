@@ -7,6 +7,9 @@ export class CartService {
   items = new BehaviorSubject<CartItemView[]>([]);
 
   constructor() {
+    if (this.get() === null) {
+      this.set([]);
+    }
     this.items.next(this.get());
   }
 
