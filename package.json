@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.0",
     "@types/jquery": "^3.3.31",
     "angular2-lightbox": "^1.4.1",
-    "bootstrap": "4.1.1",
+    "bootstrap": "4.3.1",
     "ngx-bootstrap": "^5.1.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
